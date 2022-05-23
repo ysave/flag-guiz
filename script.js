@@ -552,6 +552,7 @@ let short = ["as",
     "za",
     "zm",
     "zw"]
+let flags = JSON.parse(json)
 
 let rightAnswer
 
@@ -564,5 +565,19 @@ function randomFlag(){
 
     document.getElementById("flag").src = src.toString()
     rightAnswer = flag[0]
+    answer(flag)
+}
+function shuffle(array) {
+    array.sort(() => Math.random() - 0.5)
+    return array
+}
+
+function answer(flag){
+    let answer = shuffle(flag)
+    document.getElementById("b0").setAttribute("value", flags[answer[0]])
+    document.getElementById("b1").setAttribute("value", flags[answer[1]])
+    document.getElementById("b2").setAttribute("value", flags[answer[2]])
+    document.getElementById("b3").setAttribute("value", flags[answer[3]])
+    document.getElementById("b4").setAttribute("value", flags[answer[4]])
 
 }
