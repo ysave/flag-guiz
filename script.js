@@ -607,4 +607,11 @@ function correction(id, value){
         }
     }, 1269)
 
+    if((rightCnt === 10) && (wrongCnt === 0)){
+        startConfetti()
+        setTimeout(function (){
+            stopConfetti()
+        }, 5000)
+    }
+
 }
