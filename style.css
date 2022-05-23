@@ -1,0 +1,40 @@
+body {
+    font-family: "Verdana Pro", sans-serif;
+    background-color: #1B262C;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1,h4{
+    color: #0F4C75;
+}
+
+.stats{
+    display: flex;
+    align-items: center;
+}
+
+.flag-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.btns{
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #1B262C;
+    color: #0F4C75;
+    border: 2px solid #3282B8;
+}
+
+.btns:hover{
+    background-color: #3282B8;
+    color: white;
+}
