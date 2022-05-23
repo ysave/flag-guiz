@@ -556,6 +556,9 @@ let flags = JSON.parse(json)
 
 let rightAnswer
 
+let rightCnt = 0;
+let wrongCnt = 0;
+
 function randomFlag(){
     let flag = []
     for (let i = 0; i < 5; i++) {
@@ -579,5 +582,29 @@ function answer(flag){
     document.getElementById("b2").setAttribute("value", flags[answer[2]])
     document.getElementById("b3").setAttribute("value", flags[answer[3]])
     document.getElementById("b4").setAttribute("value", flags[answer[4]])
+
+}
+function correction(id, value){
+    if(value == flags[rightAnswer]){
+        rightCnt ++
+        document.getElementById("right").innerHTML = rightCnt
+        document.getElementById(id).style.backgroundColor = "#616F39"
+    } else {
+        wrongCnt ++
+        document.getElementById("wrong").innerHTML = wrongCnt
+        document.getElementById(id).style.backgroundColor = "#834C69"
+        for (let i = 0; i < 5; i++) {
+            if(document.getElementById("b" + i).getAttribute("value", ) === flags[rightAnswer]){
+                document.getElementById("b"+ i).style.backgroundColor = "#616F39"
+            }
+        }
+    }
+    setTimeout(function () {
+        randomFlag()
+        const buttons = document.getElementsByClassName("btns")
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].style.backgroundColor = null
+        }
+    }, 1269)
 
 }
