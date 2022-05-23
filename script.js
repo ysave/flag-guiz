@@ -585,7 +585,7 @@ function answer(flag){
 
 }
 function correction(id, value){
-    if(value == flags[rightAnswer]){
+    if(value === flags[rightAnswer]){
         rightCnt ++
         document.getElementById("right").innerHTML = rightCnt
         document.getElementById(id).style.backgroundColor = "#616F39"
